@@ -1,0 +1,27 @@
+#!/bin/bash
+
+## please set the UNIMAIL_KEY in your environment
+# UNIMAIL_KEY=""
+
+function send_email() {
+    receiver=$1
+    title=$2
+    content=$3
+
+    UNIMAIL_HOST=${UNIMAIL_HOST:-"https://unimail-back.allcloud.top"}
+
+    # support language: en, zh, vi, th, gu, id
+    UNIMAIL_LANG=${UNIMAIL_LANG:-"zh"}
+
+    echo '{"receiver": "'$receiver'", "title": "'$title'", "content": "'$content'"}'
+    curl -X POST \
+        "$UNIMAIL_HOST/api/email/sendEmail" \
+        -H "Content-Type: application/json" \
+        -H "Accept-Language: $UNIMAIL_LANG" \
+        -H "Authorization: $UNIMAIL_KEY" \
+        -d '{"receiver": "'"$receiver"'", "title": "'"$title"'", "content": "'"$content"'"}'
+}
+
+if [[ $0 == *unimail-sh-sdk ]]; then
+    send_email $1 $2 $3
+fi
