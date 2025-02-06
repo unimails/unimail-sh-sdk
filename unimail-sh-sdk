@@ -13,7 +13,7 @@ function send_email() {
     # support language: en, zh, vi, th, gu, id
     UNIMAIL_LANG=${UNIMAIL_LANG:-"zh"}
 
-    echo '{"receiver": "'$receiver'", "title": "'$title'", "content": "'$content'"}'
+    echo '{"receiver": "'"$receiver"'", "title": "'"$title"'", "content": "'"$content"'"}'
     curl -X POST \
         "$UNIMAIL_HOST/api/email/sendEmail" \
         -H "Content-Type: application/json" \
@@ -23,5 +23,5 @@ function send_email() {
 }
 
 if [[ $0 == *unimail-sh-sdk ]]; then
-    send_email $1 $2 $3
+    send_email "$1" "$2" "$3"
 fi
