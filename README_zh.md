@@ -1,5 +1,15 @@
 # unimail-sh-sdk
 
+> ⚠️ **已废弃 / 不再维护**
+>
+> 该项目使用的是 v1 版本的 SDK，目前不再进行维护。
+> 已开发了新的工具来替代本项目：**[unimail-client](https://github.com/unimails/unimail-client)**。
+>
+> - **老用户**仍可继续使用本项目。
+> - **新用户**请直接使用新项目：https://github.com/unimails/unimail-client
+>
+> 本仓库将进入归档状态。
+
 unimail 的 shell 语言 sdk, 快速集成到你的项目
 
 [english docs](README.md)

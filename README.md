@@ -1,5 +1,15 @@
 # unimail-sh-sdk
 
+> ⚠️ **Deprecated / No Longer Maintained**
+>
+> This project uses the v1 SDK and is no longer actively maintained.
+> A new tool has been developed to replace it: **[unimail-client](https://github.com/unimails/unimail-client)**.
+>
+> - **Existing users** may continue using this project as-is.
+> - **New users** are encouraged to use the new project instead: https://github.com/unimails/unimail-client
+>
+> This repository will be archived.
+
 This is a shell SDK for Unimail. Quickly integrate into your project
 
 [中文文档](README_zh.md)
